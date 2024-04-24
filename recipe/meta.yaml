@@ -38,6 +38,7 @@ test:
   imports:
     - kernel_tuner
   requires:
+    - {{ compiler('cxx') }}
     - mock
     - pep440
     - pip
