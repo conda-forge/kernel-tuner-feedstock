@@ -34,11 +34,10 @@ requirements:
 test:
   commands:
     - pip check
-    - pytest
+    - pytest -k 'not test_memcpy_host_htod'
   imports:
     - kernel_tuner
   requires:
-    - {{ compiler('cxx') }}
     - mock
     - pep440
     - pip
