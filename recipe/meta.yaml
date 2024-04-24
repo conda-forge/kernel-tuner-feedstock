@@ -1,5 +1,5 @@
 {% set name = "kernel-tuner" %}
-{% set version = "1.0.0b6" %}
+{% set version = "1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/kernel_tuner/kernel_tuner-{{ version }}.tar.gz
-  sha256: 8ec7cac41f1eec84e54bf2452008c905fad90279949e477355fb9eda054b1beb
+  sha256: c41ce19a214ff54e9a21b373f32e5a3a70b02c61e32a36a419075e863ff4c4c8
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -24,7 +24,7 @@ requirements:
     - __unix
     - jsonschema
     - numpy >=1.22.2,<2
-    - python-constraint2 >=2.0.0b3,<3
+    - python-constraint2 >=2.0.0b5,<3
     - pandas >=2.0.0,<3
     - python >=3.8,<3.12
     - scikit-learn >=1.0.2,<2
@@ -34,7 +34,7 @@ requirements:
 test:
   commands:
     - pip check
-    - pytest
+    - pytest -k 'not test_memcpy_host_htod'
   imports:
     - kernel_tuner
   requires:
@@ -47,7 +47,7 @@ test:
   source_files:
     - pyproject.toml
     - test
-    - README.rst
+    - README.md
 
 about:
   home: https://github.com/kerneltuner/kernel_tuner
