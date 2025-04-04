@@ -1,5 +1,5 @@
 {% set name = "kernel-tuner" %}
-{% set version = "1.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/kernel_tuner/kernel_tuner-{{ version }}.tar.gz
-  sha256: c41ce19a214ff54e9a21b373f32e5a3a70b02c61e32a36a419075e863ff4c4c8
+  sha256: 10bf9971377120c269e03c8779339a9e68032dd06d4fff08ede0be8496f16d0f
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   noarch: python
 
 requirements:
