@@ -23,7 +23,7 @@ requirements:
   run:
     - __unix
     - jsonschema
-    - numpy >=1.22.2,<2
+    - numpy >=2.0.0,<3
     - python-constraint2 >=2.0.0b5,<3
     - pandas >=2.0.0,<3
     - python >={{ python_min }},<3.12
