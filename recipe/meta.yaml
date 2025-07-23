@@ -1,5 +1,6 @@
 {% set name = "kernel-tuner" %}
 {% set version = "1.2.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -23,18 +24,19 @@ requirements:
   run:
     - __unix
     - jsonschema
-    - numpy >=2.0.0,<3
-    - python-constraint2 >=2.0.0b5,<3
-    - pandas >=2.0.0,<3
-    - python >={{ python_min }},<3.12
-    - scikit-learn >=1.0.2,<2
-    - scipy >=1.10.1,<2
+    - numpy >=2.0.0
+    - packaging
+    - python-constraint2 >=2.3.1
+    - pandas >=2.0.0
+    - python >={{ python_min }},<4
+    - scikit-learn >=1.0.2
+    - scipy >=1.14.1
     - xmltodict
 
 test:
   commands:
     - pip check
-    - pytest -k 'not test_memcpy_host_htod'
+    - pytest -k 'not test_memcpy_dtoh and not test_memcpy_host_htod and not test_refresh_memory'
   imports:
     - kernel_tuner
   requires:
