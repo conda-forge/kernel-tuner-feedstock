@@ -45,7 +45,7 @@ test:
     - pip
     - pytest >=7.4
     - pytest-cov
-    - scikit-optimize = 0.10.2
+    - scikit-optimize =0.10.2
     - tomli
     - python {{ python_min }}
   source_files:
