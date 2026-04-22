@@ -22,7 +22,7 @@ requirements:
   host:
     - pip
     - poetry-core >=1.7.0
-    - python 3.11.*
+    - python ${{ python_min }}.*
     - setuptools >=67.7.2
   run:
     - __unix
