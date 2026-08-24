@@ -29,7 +29,8 @@ requirements:
     - jsonschema
     - numpy >=2.0.0
     - packaging
-    - python-constraint2 >=2.4.0
+    - pymoo >=0.6.1.6
+    - python-constraint2 >=2.5.0
     - pandas >=2.0.0
     - python >=${{ python_min }},<4
     - scikit-learn >=1.0.2
