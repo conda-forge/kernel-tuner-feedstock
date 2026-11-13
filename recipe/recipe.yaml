@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: kernel-tuner
-  version: "1.5.0"
+  version: "1.6.0"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/kernel_tuner/kernel_tuner-${{ version }}.tar.gz
-  sha256: c1b6c9469d607457ec9a2e783135f067b2799da19517e2d7bc84e192aee7a273
+  sha256: 65ef8ebec4e240eeb96f8f7a3f14d20953c72d7a7041afc388485a794cb8fe3c
 
 build:
   number: 0
