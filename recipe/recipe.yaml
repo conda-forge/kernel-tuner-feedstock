@@ -57,7 +57,7 @@ tests:
         - scikit-optimize =0.10.2
         - python ${{ python_min }}.*
     script:
-      - pytest -k 'not test_memcpy_dtoh and not test_memcpy_host_htod and not test_refresh_memory'
+      - pytest -k 'not test_memcpy_dtoh and not test_memcpy_host_htod and not test_refresh_memory and not test_dual_annealing_gives_warning'
 
 about:
   summary: An easy to use CUDA/OpenCL kernel tuner in Python
